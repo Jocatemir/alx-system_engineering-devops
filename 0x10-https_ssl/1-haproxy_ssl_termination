@@ -37,14 +37,15 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
 
-frontend jocatemir
+frontend jocatemir.tech
         bind 0:80
         bind 0:443 ssl crt /etc/ssl/private/jocatemir.pem
         http-request redirect scheme https code 301 unless { ssl_fc }
         option forwardfor
         default_backend Jocatemir_backend
 
-backend jocatemir_backend
+backend jocatemir.tech_backend
         balance roundrobin
-        server 64820-web-01 100.26.152.157:80 check
-        server 64820-web-02 52.86.102.6:80 check
+        server 64820-web-01 54.197.206.60:80 check
+        server 64820-web-02 54.152.54.22:80 check:wq
+        
