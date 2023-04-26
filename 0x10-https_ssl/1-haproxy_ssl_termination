@@ -47,5 +47,5 @@ frontend jocatemir.tech
 backend jocatemir.tech_backend
         balance roundrobin
         server 64820-web-01 54.197.206.60:80 check
-        server 64820-web-02 54.152.54.22:80 check:wq
+        server 64820-web-02 54.152.54.22:80 check
         
